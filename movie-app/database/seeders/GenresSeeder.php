@@ -100,6 +100,5 @@ class GenresSeeder extends Seeder
             'nama' => 'Action Comedy',
             'deskripsi' => 'Film dengan aksi dan unsur komedi',
         ]);
-
     }
 }

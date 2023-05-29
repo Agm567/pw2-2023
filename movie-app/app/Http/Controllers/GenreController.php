@@ -3,21 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Genre;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class GenreController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $genre = new Genre;
-        $genres = $genre->getAllGenres();
+        $genres = Genre::all();
 
-        return view('genres.index', ['genres' => $genres]);
+        return view('genres.index', compact('genres'));
     }
 
     /**
