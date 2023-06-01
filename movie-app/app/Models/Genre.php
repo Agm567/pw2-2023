@@ -9,6 +9,8 @@ class Genre extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['nama', 'deskripsi'];
+
     public function genre()
     {
         return $this->belongsTo(Genre::class);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\review;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class ReviewController extends Controller
@@ -26,7 +27,9 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        //
+        $reviews = Review::all();
+
+        return view('reviews.create', compact('reviews'));
     }
 
     /**
@@ -37,7 +40,16 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'film' => 'required',
+            'user' => 'required',
+            'rating' => 'required|numeric',
+            'tanggal' => 'required|date',
+        ]);
+    
+        Review::create($validatedData);
+    
+        return redirect('/reviews')->with('success', 'Review added successfully!');
     }
 
     /**
@@ -82,6 +94,8 @@ class ReviewController extends Controller
      */
     public function destroy(review $review)
     {
-        //
+        $review->delete();
+
+        return redirect('/reviews')->with('success', 'Review deleted successfully!');
     }
 }
