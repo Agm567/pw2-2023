@@ -28,6 +28,7 @@
                     <th>Film</th>
                     <th>User</th>
                     <th>Rating</th>
+                    <th>Review</th>
                     <th>Tanggal</th>
                     <th>Action</th>
                 </tr>
@@ -38,6 +39,7 @@
                     <th>Film</th>
                     <th>User</th>
                     <th>Rating</th>
+                    <th>Review</th>
                     <th>Tanggal</th>
                     <th>Action</th>
                 </tr>
@@ -49,6 +51,7 @@
                     <td><?php echo e($review->film); ?></td>
                     <td><?php echo e($review->user); ?></td>
                     <td><?php echo e($review->rating); ?></td>
+                    <td><?php echo e($review->review); ?></td>
                     <td><?php echo e($review->tanggal); ?></td>
                     <td>
                         <a href="" class="btn btn-sm btn-warning"> Edit</a>

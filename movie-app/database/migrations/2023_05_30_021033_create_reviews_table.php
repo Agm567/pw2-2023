@@ -18,6 +18,7 @@ class CreateReviewsTable extends Migration
             $table->string('film');
             $table->string('user');
             $table->float('rating');
+            $table->string('review');
             $table->date('tanggal');
             $table->timestamps();
         });

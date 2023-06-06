@@ -29,6 +29,7 @@
                     <th>Film</th>
                     <th>User</th>
                     <th>Rating</th>
+                    <th>Review</th>
                     <th>Tanggal</th>
                     <th>Action</th>
                 </tr>
@@ -39,6 +40,7 @@
                     <th>Film</th>
                     <th>User</th>
                     <th>Rating</th>
+                    <th>Review</th>
                     <th>Tanggal</th>
                     <th>Action</th>
                 </tr>
@@ -50,6 +52,7 @@
                     <td>{{ $review->film }}</td>
                     <td>{{ $review->user }}</td>
                     <td>{{ $review->rating }}</td>
+                    <td>{{ $review->review }}</td>
                     <td>{{ $review->tanggal }}</td>
                     <td>
                         <a href="" class="btn btn-sm btn-warning"> Edit</a>
