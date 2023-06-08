@@ -45,7 +45,7 @@
                     <td><?php echo e($genre->nama); ?></td>
                     <td><?php echo e($genre->deskripsi); ?></td>
                     <td>
-                    <a href="" class="btn btn-sm btn-warning"> Edit</a>
+                    <a href="/genres/<?php echo e($genre->id); ?>/edit" class="btn btn-sm btn-warning"> Edit</a>
                         <form action="/genres/<?php echo e($genre->id); ?>" method="POST">
                             <?php echo csrf_field(); ?>
                             <?php echo method_field('DELETE'); ?>

@@ -57,7 +57,7 @@
                     <td><?php echo e($movie->tahun); ?></td>
                     <td><?php echo e($movie->rating); ?></td>
                     <td>
-                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
+                    <a href="/movies/<?php echo e($movie->id); ?>/edit" class="btn btn-sm btn-warning"> Edit</a>
                         <form action="/movies/<?php echo e($movie->id); ?>" method="POST">
                             <?php echo csrf_field(); ?>
                             <?php echo method_field('DELETE'); ?>

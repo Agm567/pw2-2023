@@ -54,7 +54,7 @@
                     <td><?php echo e($review->review); ?></td>
                     <td><?php echo e($review->tanggal); ?></td>
                     <td>
-                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
+                    <a href="/reviews/<?php echo e($review->id); ?>/edit" class="btn btn-sm btn-warning"> Edit</a>
                         <form action="/reviews/<?php echo e($review->id); ?>" method="POST">
                             <?php echo csrf_field(); ?>
                             <?php echo method_field('DELETE'); ?>

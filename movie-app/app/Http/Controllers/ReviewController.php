@@ -44,6 +44,7 @@ class ReviewController extends Controller
             'film' => 'required',
             'user' => 'required',
             'rating' => 'required|numeric',
+            'review' => 'required',
             'tanggal' => 'required|date',
         ]);
     
@@ -71,7 +72,9 @@ class ReviewController extends Controller
      */
     public function edit(review $review)
     {
-        //
+        $reviews = Review::all();
+    
+        return view('reviews.edit', compact('review', 'reviews'));
     }
 
     /**
@@ -83,7 +86,17 @@ class ReviewController extends Controller
      */
     public function update(Request $request, review $review)
     {
-        //
+        $validatedData = $request->validate([
+            'film' => 'required',
+            'user' => 'required',
+            'rating' => 'required|numeric',
+            'review' => 'required',
+            'tanggal' => 'required|date',
+        ]);
+    
+        $review->update($validatedData);
+    
+        return redirect('/reviews')->with('success', 'Review updated successfully!');
     }
 
     /**

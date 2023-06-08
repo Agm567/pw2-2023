@@ -41,6 +41,10 @@
                         <input type="text" id="rating" name="rating" class="form-control">
                     </div>
                     <div class="mb-3">
+                        <label for="review" class="form-label">Review:</label>
+                        <input type="text" id="review" name="review" class="form-control">
+                    </div>
+                    <div class="mb-3">
                         <label for="tanggal" class="form-label">Tanggal:</label>
                         <input type="date" id="tanggal" name="tanggal" class="form-control">
                     </div>
