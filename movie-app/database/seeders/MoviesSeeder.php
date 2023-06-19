@@ -17,7 +17,7 @@ class MoviesSeeder extends Seeder
     
         Movie::create([
             'judul' => 'The Godfather',
-            'poster' => 'image.png',
+            'poster' => '1686814723.png',
             'genre_id' => 3,
             'negara' => 'USA',
             'tahun' => '1972',
@@ -26,7 +26,7 @@ class MoviesSeeder extends Seeder
 
         Movie::create([
             'judul' => 'The Shawshank Redemption',
-            'poster' => 'image.png',
+            'poster' => '1686813712.png',
             'genre_id' => '1',
             'negara' => 'USA',
             'tahun' => 1994,

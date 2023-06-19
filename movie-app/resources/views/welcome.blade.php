@@ -29,7 +29,7 @@
                             <a class="nav-link" href="/genres">Genres</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="reviews">Reviews</a>
+                            <a class="nav-link" href="/reviews">Reviews</a>
                         </li>
                     </ul>
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end">
@@ -62,10 +62,10 @@
                     @foreach ($movies as $movie)
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="/assets/img/{{ $movie->poster }}">
+                            <img src="/assets/img/{{$movie->poster}}">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="#">{{ $movie->judul }}</a></h4>
-                                <p class="card-text">Genre: {{ $movie->genre->nama }}</p>
+                                <h4 class="card-title"><a href="/movies">{{ $movie->judul }}</a></h4>
+                                <p class="card-text">Genre: <a href="/genres">{{ $movie->genre->nama }}</a></p>
                                 <p class="card-text">Rating: {{ $movie->rating }} &#11088;</p>
                                 <p class="card-text">Tahun: {{ $movie->tahun }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
